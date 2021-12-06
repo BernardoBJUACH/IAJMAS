@@ -1,6 +1,11 @@
 # IAJMAS
+Pasos Ejecutar bd:
 
-Pasos:
+Abrir doc: https://docs.google.com/document/d/1HIGv1uSTOjtVHO64fZS1QcBM6S4GjH41/edit
+
+
+
+Pasos ejecucion de programa:
 
 1. Instalar el programa xampp
 2. Ejecutar el control panel de xampp y arrancar el servidor tomcat
