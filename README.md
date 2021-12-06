@@ -1,4 +1,7 @@
 # IAJMAS
+
+Descargar bd: https://drive.google.com/file/d/1KQxGQodgDp5qOjcrNq4YcKsUSxwRNJqg/view?usp=sharing
+
 Pasos Ejecutar bd:
 
 Abrir doc: https://docs.google.com/document/d/1HIGv1uSTOjtVHO64fZS1QcBM6S4GjH41/edit
