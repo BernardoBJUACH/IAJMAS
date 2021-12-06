@@ -1,0 +1,18 @@
+Hola Victor y Bernardo,
+
+ya les estoy enviando la BD en donde harán EDA (Exploratory Data Analysis). 
+
+Qué contiene esta BD? Datos del agua de la ciudad de Chihuahua. Más específicamente datos de sensores que se encuentran instalados en tanques, pozos, bombas y válvulas de toda la red hidráulica de la ciudad. Estos datos corresponden a lecturas de los sensores por un año para cada una de esas instalaciones. 
+
+Qué pueden hacer? 
+-Explorar la BD.
+-Ver qué información contiene, en qué formato, cuánta hay, sobre qué es.....
+-Tratar de hacer algunos queries por tipo de instalación, por ejemplo, solo de pozos, o solo de tanques. 
+-Extraer datos de algunas instalaciones, por ejemplo de 5 pozos y graficarla para ver cómo luce. Para esto es indispensable determinar qué variables existen, es decir, sobre qué van a graficar....
+-Y cosas de este estilo que les permitan ir "entendiendo" su problema. 
+
+También les estoy enviando por aquí una presentación que yo impartí en un taller de Ciencia de Datos y presenté este proyecto. Creo que les puede servir para contextualizar incluso mejor la info que ahora tienen en sus manos. 
+
+Saludos y cualquier duda o pregunta no se esperen hasta vernos en clase, la pueden hacer por aquí.
+
+Suerte!
