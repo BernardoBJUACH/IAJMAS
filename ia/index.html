@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>IA</title>
+    <meta charset="UTF-8">
+
+    <script src="../source/Core/bootstrap/4.5.3/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="../source/Core/bootstrap/4.5.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../source/Messages/sweetalert2/10.11.0/js/sweetalert.min.js"></script>
+    <script src="test.js"></script>
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="../source/Core/bootstrap/4.5.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../source/Icon/font-awesome/4.6.2/css/font-awesome.min.css">
+
+    <script src="../source/Plugins/select2/select2.js" type="text/javascript"></script>
+    <link href="../source/Plugins/select2/select2.css" rel="stylesheet" type="text/css">
+    <link href="../source/Plugins/select2/select2-bootstrap.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript" src="../source/Plugins/daterangepicker/moment.min.js"></script>
+    <script type="text/javascript" src="../source/Plugins/daterangepicker/daterangepicker.js"></script>
+    <link rel="stylesheet" type="text/css" href="../source/Plugins/daterangepicker/daterangepicker.css" />
+
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.bootstrap4.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.html5.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.print.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/buttons.colVis.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.bootstrap4.min.css" />
+
+    <style>
+        .basicDataTable {
+            white-space:nowrap;
+            width:100%;
+        }
+        .list-group {
+            width:100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="row text-center">
+        <div class="col-md-12">
+            <h4 class="m-0 text-primary">Ingeniaría en ciencias de la computación</h4>
+            <h5 class="m-0 text-primary">Inteligencia Artificial</h5>
+            <h4 class="m-0"><small>Proyecto JMAS Chihuahua</small></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h6 class="ml-2 mt-0 mb-1">
+                Bernardo Alfonso Borunda Jaquez <small>314788</small>
+            </h6>
+        </div>
+        <div class="col-md-12">
+            <h6 class="ml-2 mt-0 mb-1">
+                Victor Hugo Aguilar Parra <small>320663</small>
+            </h6>
+        </div>
+    </div>
+    <hr color="blue" class="ml-2 mr-2">
+
+    <!-- Main Form -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card m-2">
+                <div class="card-header">
+                    <h4 class="card-title mb-1">
+                        <i class="fa fa-cogs"></i>
+                        Vectores caracteristicos
+                    </h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <lable>Organizar por</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-table"></i></span>
+                                </div>
+                                <select id="OrganizaPor" class="form-control">
+                                    <option value="Renglon" selected>Renglon</option>
+                                    <option value="Columna">Columna</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Tipo Instalación</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-tags"></i></span>
+                                </div>
+                                <select id="TipoInstalacion" class="form-control">
+                                    <option value=""></option>
+                                    <option value="1">Pozo</option>
+                                    <option value="2">Tanque</option>
+                                    <option value="3">Rebombeo</option>
+                                    <option value="4">Valvula</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Instalación</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-building-o"></i></span>
+                                </div>
+                                <select id="Instalacion" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Seleccionado</lable>
+                            <button type="button" class="btn btn-sm btn-danger pull-right" id="btnClear">
+                                <i class="fa fa-eraser"></i>
+                            </button>
+                            <div class="list-group" id="Instalaciones"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <lable>Unidad</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-balance-scale"></i></span>
+                                </div>
+                                <select id="Unidad" class="form-control">
+                                    <option value=""></option>
+                                    <option value="YYYY-MM-DD HH24:MI">Minuto</option>
+                                    <option value="YYYY-MM-DD HH24">Hora</option>
+                                    <option value="YYYY-MM-DD">Día</option>
+                                    <option value="WW">Semana</option>
+                                    <option value="YYYY-MM" selected>Mes</option>
+                                    <option value="YYYY">Año</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Vectorizar por</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-tag"></i></span>
+                                </div>
+                                <select id="VectorizarPor" class="form-control">
+                                    <option value="Instalacion">Instalación</option>
+                                    <option value="Unidad">Unidad</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Fechas <small> DD/MM/YYYY H24:MI</small></lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+                                </div>
+                                <input type="text" class="form-control" id="RangoFechas">
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <lable>Variable</lable>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-tag"></i></span>
+                                </div>
+                                <select id="Variable" class="form-control">
+                                    <option value=""></option>
+                                    <option value="Amperaje">Amperaje</option>
+                                    <option value="Bomba">Bomba</option>
+                                    <option value="Gasto">Gasto</option>
+                                    <option value="Motor">Motor</option>
+                                    <option value="Nivel">Nivel</option>
+                                    <option value="Potencia">Potencia</option>
+                                    <option value="Presion" selected>Presion</option>
+                                    <option value="Temperatura">Temperatura</option>
+                                    <option value="Voltaje">Voltaje</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-12">
+                            <h6 class="text-center">Calculos</h6>
+                        </div>
+                    </div>
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="Media" checked> Media</lable>
+                        </div>
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="Mediana" checked> Mediana</lable>
+                        </div>
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="Moda" checked> Moda</lable>
+                        </div>
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="Minimo" checked> Mínimo</lable>
+                        </div>
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="Maximo" checked> Máximo</lable>
+                        </div>
+                        <div class="col-md-2">
+                            <lable><input type="checkbox" id="DE" checked> DE</lable>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="row justify-content-md-center">
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-block btn-success" id="btnGenerar">
+                                <i class="fa fa-cogs"></i>
+                                Generar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Renglon -->
+    <div class="row d-none" id="DivRenglon">
+        <div class="col-md-12 p-4" id="WrapperRenglon">
+            <h4 class="card-title mb-1">Vectores obtenidos (Modo Renglon)</h4>
+            <table class="table table-bordered table-striped basicDataTable" id="DataTableRenglon">
+                <thead>
+                    <tr class="table-info">
+                        <th class="text-center">
+                            <input type="checkbox" id="SelectAllRenglon">
+                            Todo
+                        </th>
+                        <th class="text-center">Instalación</th>
+                        <th class="text-center" id="lblUnidad"></th>
+                        <th class="text-center">Variable</th>
+                        <th class="text-center">Media</th>
+                        <th class="text-center">Mediana</th>
+                        <th class="text-center">Moda</th>
+                        <th class="text-center">Mínimo</th>
+                        <th class="text-center">Máximo</th>
+                        <th class="text-center">DE</th>
+                        <th class="text-center">Count</th>
+                    </tr>
+                </thead>
+                <tbody id="TabRenglon"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Results Columna -->
+    <div class="row d-none" id="DivColumna">
+        <div class="col-md-12 p-4" id="WrapperColumna">
+            <h4 class="card-title mb-1">Vectores obtenidos (Modo Columna)</h4>
+            <table class="table table-bordered table-striped basicDataTable" id="DataTableColumna">
+                <thead>
+                    <tr class="table-info" id="TabColumnMainHeader">
+                        <th class="text-center">&nbsp;</th>
+                        <th class="text-center">Unidad</th>
+                    </tr>
+                    <tr class="table-info" id="TabColumnSecondHeader">
+                        <th class="text-center"><input type="checkbox" id="SelectAllColumna"> Todo</th>
+                        <th class="text-center">&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id="TabColumna"></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
